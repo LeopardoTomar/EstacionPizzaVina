@@ -1,0 +1,117 @@
+header {
+    background-color: #333;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+}
+.header {
+    width: 100%;
+    background-color: #333; /* Color de fondo del encabezado */
+    color: white; /* Color del texto del encabezado */
+    text-align: center; /* Alineación del texto del encabezado */
+    position: fixed; /* Fija el encabezado en la parte superior de la ventana del navegador */
+    top: 0; /* Coloca el encabezado en la parte superior de la ventana */
+    z-index: 1000; /* Asegura que el encabezado esté por encima de otros elementos */
+    transition: top 0.2s ease; /* Transición suave al cambiar la propiedad top */
+    height: 100px; /* Altura del encabezado: 10% del alto de la ventana */
+    overflow: hidden;
+}
+
+.header.hidden {
+    top: -100px; /* Mueve el encabezado fuera de la pantalla cuando está oculto */
+}
+.logo {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.logo i {
+    margin-right: 5px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff6b00;
+}
+.logo img {
+    max-width: 90px; /* ajusta el ancho máximo según sea necesario */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff6b00;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap; /* Para que los elementos se envuelvan en dispositivos más pequeños */
+    }
+
+    .logo {
+        order: 1; /* Cambiamos el orden para que el logo aparezca primero */
+    }
+
+    .logo img {
+        max-width: 90px;
+        height: auto;
+    }
+
+    nav {
+        order: 2; /* Cambiamos el orden para que la navegación aparezca después */
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end; /* Alineamos los elementos de navegación a la derecha */
+    }
+
+}
+:target::before {
+    content: "";
+    display: block;
+    height: 100px; /* Ajusta la altura según la altura de tu encabezado */
+    margin: -100px 0 0; /* Ajusta el margen superior negativo para compensar el header */
+}
+html {
+    scroll-behavior: smooth;
+}

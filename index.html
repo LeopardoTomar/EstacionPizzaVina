@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estacion Pizza</title>
+    <link rel="stylesheet" href="carrousel.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="secciones.css">
+    <link rel="stylesheet" href="footer.css">
+    <script src="carrousel.js" defer></script>
+    <script src="header.JS" defer></script>
+    <script src="mapa.JS" defer></script>
+    <script src="https://kit.fontawesome.com/1f296e140d.js" crossorigin="anonymous"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY&callback=initMap" async defer></script>
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="logo">
+            <img src="icono_final.png" alt="Logo de la Pizzería">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#promociones">Promociones</a></li>
+                <li><a href="#Pizza_familiar">Pizzas Familiares</a></li>
+                <li><a href="#acompanamientos">Acompañamientos</a></li>
+                <li><a href="#postres">Postres</a></li>
+                <li><a href="#bebidas">Bebidas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="carrousel">
+        <div class="grande">
+            <img src="Promocion 1.png" alt="imagen 1" class="img">
+            <img src="promocion 2.png" alt="imagen 2" class="img">
+            <img src="Promocion 3.png" alt="imagen 3" class="img">
+        </div>
+        <ul class="puntos">
+            <li class="punto activo"></li>
+            <li class="punto"></li> 
+            <li class="punto"></li>
+        </ul>
+    </div>
+
+    <main>
+        <!-- Aquí van las promociones -->
+        <section class="section" id="promociones">
+            <h2 class="secciones_h2">Promociones</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <div class="image-container">
+                        <img src="promocion.png" alt="PIZZA FAMILIAR PEPPERONI + BEBIDA 1.5 LT">
+                    </div>
+                    <div class="card-info">
+                        <h3>PIZZA FAMILIAR PEPPERONI + BEBIDA 1.5 LT</h3>
+                        <p>Salsa de tomates, queso mozzarelLa y pepperoni.</p>
+                        <p class="price">$12.390</p> <!-- Precio -->
+                        <button class="add-to-cart">Agregar al carrito</button> <!-- Botón -->
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-container">
+                        <img src="promocion.png" alt="02 PIZZAS MEDIANAS">
+                    </div>
+                    <div class="card-info">
+                        <h3>02 PIZZAS MEDIANAS</h3>
+                        <p>Puedes elegir entre Pepperoni o Caprese</p>
+                        <p class="price">$14.990</p> <!-- Precio -->
+                        <button class="add-to-cart">Agregar al carrito</button> <!-- Botón -->
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-container">
+                        <img src="promocion.png" alt="02 PIZZAS FAMILIARES">
+                    </div>
+                    <div class="card-info">
+                        <h3>02 PIZZAS FAMILIARES</h3>
+                        <p>Puedes elegir entre pepperoni, caprese, napolitana, pollo bbq, veggie mix, blanca, pesto, sin carne Y lovegan.</p>
+                        <p class="price">$23.990</p> <!-- Precio -->
+                        <button class="add-to-cart">Agregar al carrito</button> <!-- Botón -->
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-container">
+                        <img src="carrousel1.jpg" alt="PIZZA FAMILIAR + ACOMPANAMIENTO + BEBIDA">
+                    </div>
+                    <div class="card-info">
+                        <h3>PIZZA FAMILIAR + ACOMPANAMIENTO + BEBIDA</h3>
+                        <p>Pizza familiar pollo bbq, american pork o pesto + palos de ajo o queso + bebida 1.5</p>
+                        <p class="price">$19.990</p> <!-- Precio -->
+                        <button class="add-to-cart">Agregar al carrito</button> <!-- Botón -->
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-container">
+                        <img src="carrousel1.jpg" alt="Promoción 1">
+                    </div>
+                    <div class="card-info">
+                        <h3>PIZZA MINI + BEBIDA INDIVIDUAL</h3>
+                        <p>Sabor de pizza a eleccion + bebida o jugo individual</p>
+                        <p class="price">$6.500</p> <!-- Precio -->
+                        <button class="add-to-cart">Agregar al carrito</button> <!-- Botón -->
+                    </div>
+                </div>
+            </div>
+        </section> 
+        <!-- Aquí van las pizzas familiares -->
+        <section class="section" id="Pizza_familiar">
+            <h2 class="secciones_h2">PIZZAS FAMILIARES</h2>
+            <h2 class="sub_section">CLASICAS</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <div class="image-container">
+                        <img src="Pepperoni.jpg" alt="PEPPERONI">
+                    </div>
+                    <div class="card-info">
+                        <h3>PEPPERONI</h3>
+                        <p>Salsa de tomates, queso mozzarelLa y pepperoni.</p>
+                        <p class="price">$10.990</p> <!-- Precio -->
+                        <button class="add-to-cart">Agregar al carrito</button> <!-- Botón -->
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-container">
+                        <img src="napolitana.jpg" alt="NAPOLITANA">
+                    </div>
+                    <div class="card-info">
+                        <h3>NAPOLITANA</h3>
+                        <p>Salsa de tomates, queso mozzarelLa, tomate,jamón, aceitunas y orégano.</p>
+                        <p class="price">$13.990</p> <!-- Precio -->
+                        <button class="add-to-cart">Agregar al carrito</button> <!-- Botón -->
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-container">
+                        <img src="pollo.jpg" alt="POLLO BBQ1">
+                    </div>
+                    <div class="card-info">
+                        <h3>POLLO BBQ</h3>
+                        <p>Salsa de tomates, queso mozzarelLa, pollo BBQ, tocino y cebolla morada.</p>
+                        <p class="price">$14.990</p> <!-- Precio -->
+                        <button class="add-to-cart">Agregar al carrito</button> <!-- Botón -->
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-container">
+                        <img src="american_pork.jpg" alt="AMERICAN PORK">
+                    </div>
+                    <div class="card-info">
+                        <h3>AMERICAN PORK</h3>
+                        <p>Salsa de tomates, queso mozzarelLa, tocino, jamón, pepperoni y chorizo.</p>
+                        <p class="price">$14.990</p> <!-- Precio -->
+                        <button class="add-to-cart">Agregar al carrito</button> <!-- Botón -->
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-container">
+                        <img src="tres_carnes.jpg" alt="TRES CARNES">
+                    </div>
+                    <div class="card-info">
+                        <h3>TRES CARNES</h3>
+                        <p>Salsa de tomates, queso mozzarelLa, carne, pollo BBQ y chorizo.</p>
+                        <p class="price">$15.990</p> <!-- Precio -->
+                        <button class="add-to-cart">Agregar al carrito</button> <!-- Botón -->
+                    </div>
+                </div>
+            </div>
+            <h2 class="sub_section">DE LA CASA</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <div class="image-container">
+                        <img src="blanca.jpg" alt="BLANCA">
+                    </div>
+                    <div class="card-info">
+                        <h3>BLANCA</h3>
+                        <p>Queso mozzarelLa, pollo, tocino y choclo.</p>
+                        <p class="price">$13.990</p> <!-- Precio -->
+                        <button class="add-to-cart">Agregar al carrito</button> <!-- Botón -->
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-container">
+                        <img src="pesto.jpg" alt="PESTO">
+                    </div>
+                    <div class="card-info">
+                        <h3>PESTO</h3>
+                        <p>Salsa de tomates, queso mozzarelLa, pollo, choclo y pesto.</p>
+                        <p class="price">$14.990</p> <!-- Precio -->
+                        <button class="add-to-cart">Agregar al carrito</button> <!-- Botón -->
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-container">
+                        <img src="mechada.jpg" alt="MECHADA">
+                    </div>
+                    <div class="card-info">
+                        <h3>MECHADA</h3>
+                        <p>Salsa de tomates, queso mozzarelLa, carne mechada, pimenton Y cebolla morada.</p>
+                        <p class="price">$14.990</p> <!-- Precio -->
+                        <button class="add-to-cart">Agregar al carrito</button> <!-- Botón -->
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-container">
+                        <img src="" alt="CAMARON CREMA">
+                    </div>
+                    <div class="card-info">
+                        <h3>CAMARON CREMA</h3>
+                        <p>Salsa de tomates, queso mozzarelLa, camaron, choclo y crema de leche.</p>
+                        <p class="price">$14.990</p> <!-- Precio -->
+                        <button class="add-to-cart">Agregar al carrito</button> <!-- Botón -->
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-container">
+                        <img src="" alt="POLLO CREMA">
+                    </div>
+                    <div class="card-info">
+                        <h3>POLLO CREMA</h3>
+                        <p>Salsa de tomates, queso mozzarelLa, pollo, champiñon, choclo y crema de leche.</p>
+                        <p class="price">$14.990</p> <!-- Precio -->
+                        <button class="add-to-cart">Agregar al carrito</button> <!-- Botón -->
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-container">
+                        <img src="" alt="CREAM CHEESSE">
+                    </div>
+                    <div class="card-info">
+                        <h3>CREAM CHEESSE</h3>
+                        <p>Salsa de tomates, queso mozzarelLa, tocino, cebolla morada, oregano y queso crema americano.</p>
+                        <p class="price">$14.990</p> <!-- Precio -->
+                        <button class="add-to-cart">Agregar al carrito</button> <!-- Botón -->
+                    </div>
+                </div>
+            </div>
+            <h2 class="sub_section">VEGGIES</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <div class="image-container">
+                        <img src="capresse-01.jpg" alt="CAPRESE">
+                    </div>
+                    <div class="card-info">
+                        <h3>CAPRESE</h3>
+                        <p>Salsa de tomates, queso mozzarelLa, tomate cherry y albahaca.</p>
+                        <p class="price">$12.990</p> <!-- Precio -->
+                        <button class="add-to-cart">Agregar al carrito</button> <!-- Botón -->
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-container">
+                        <img src="veggie_mix.jpg" alt="VEGGIE MIX">
+                    </div>
+                    <div class="card-info">
+                        <h3>VEGGIE MIX</h3>
+                        <p>Salsa de tomates, queso mozzarelLa, pimentón, cebolla morada, champiñón y choclo.</p>
+                        <p class="price">$13.990</p> <!-- Precio -->
+                        <button class="add-to-cart">Agregar al carrito</button> <!-- Botón -->
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-container">
+                        <img src="sin_carne.jpg" alt="SIN CARNE">
+                    </div>
+                    <div class="card-info">
+                        <h3>SIN CARNE</h3>
+                        <p>Salsa de tomates, queso mozzarelLa, carne vegana, choclo, pimentón y cebolla morada.</p>
+                        <p class="price">$15.490</p> <!-- Precio -->
+                        <button class="add-to-cart">Agregar al carrito</button> <!-- Botón -->
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-container">
+                        <img src="lovegan.jpg" alt="LOVEGAN">
+                    </div>
+                    <div class="card-info">
+                        <h3>LOVEGAN</h3>
+                        <p>Salsa de tomates, queso mozzarelLa vegano, champiñón, cebolla morada, tomate cherry y aceitunas</p>
+                        <p class="price">$15.490</p> <!-- Precio -->
+                        <button class="add-to-cart">Agregar al carrito</button> <!-- Botón -->
+                    </div>
+                </div>
+            </div>
+            <h2 class="sub_section">MATA HAMBRE</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <div class="image-container">
+                        <img src="" alt="PIZZA BURGER">
+                    </div>
+                    <div class="card-info">
+                        <h3>PIZZA BURGER</h3>
+                        <p>Salsa de tomates, 700 gramos de carne, queso cheddar, queso mozzarelLa, tocino, pepperoni, tomate, y cebolla.</p>
+                        <p class="price">$18.990</p> <!-- Precio -->
+                        <button class="add-to-cart">Agregar al carrito</button> <!-- Botón -->
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-container">
+                        <img src="" alt="PIZZA VEGGIE BURGER">
+                    </div>
+                    <div class="card-info">
+                        <h3>PIZZA VEGGIE BURGER</h3>
+                        <p>Salsa de tomates, 700 gramos de carne vegana, queso cheddar, queso mozzarelLa, champiñon, tomate, cebolla y aceitunas.</p>
+                        <p class="price">$18.990</p> <!-- Precio -->
+                        <button class="add-to-cart">Agregar al carrito</button> <!-- Botón -->
+                    </div>
+                </div>
+            </div>
+        </section> 
+        <!-- Aquí van los acompañamientos -->
+        <section class="section" id="acompanamientos">
+            <h2 class="secciones_h2">ACOMPAÑAMIENTOS</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <div class="image-container">
+                        <img src="palos de ajo.jpg" alt="PALOS DE AJO">
+                    </div>
+                    <div class="card-info">
+                        <h3>PALOS DE AJO</h3>
+                        <p>7 palitos horneados, bañados con salsa de ajo y queso parmesano + 1 cup salsa de tomate.</p>
+                        <p class="price">$4.490</p> <!-- Precio -->
+                        <button class="add-to-cart">Agregar al carrito</button> <!-- Botón -->
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-container">
+                        <img src="palos_de_queso.jpg" alt="PALOS DE QUESO">
+                    </div>
+                    <div class="card-info">
+                        <h3>PALOS DE QUESO</h3>
+                        <p>7 palitos horneados con queso mozzarella y orégano + 1 cup salsa de tomate.</p>
+                        <p class="price">$4.990</p> <!-- Precio -->
+                        <button class="add-to-cart">Agregar al carrito</button> <!-- Botón -->
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-container">
+                        <img src="cinnapie.jpg" alt="CINNAPIE">
+                    </div>
+                    <div class="card-info">
+                        <h3>CINNAPIE</h3>
+                        <p>Postre caliente de manzana, canela y glaseado.</p>
+                        <p class="price">$4.490</p> <!-- Precio -->
+                        <button class="add-to-cart">Agregar al carrito</button> <!-- Botón -->
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-container">
+                        <img src="" alt="NUT ROLLS">
+                    </div>
+                    <div class="card-info">
+                        <h3>NUT ROLLS</h3>
+                        <p>4 Rollos horneados rellenos de nutella, cubiertos con salsa de Nutella.</p>
+                        <p class="price">$3.290</p> <!-- Precio -->
+                        <button class="add-to-cart">Agregar al carrito</button> <!-- Botón -->
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-container">
+                        <img src="" alt="CHEESY ROLLS CHAMPIÑON CHOCLO">
+                    </div>
+                    <div class="card-info">
+                        <h3>CHEESY ROLLS CHAMPIÑON CHOCLO</h3>
+                        <p>6 Rollos horneados rellenos de champiñón, choclo, queso mozzarella y parmesano + 1 cup de salsa de ajo</p>
+                        <p class="price">$4.490</p> <!-- Precio -->
+                        <button class="add-to-cart">Agregar al carrito</button> <!-- Botón -->
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-container">
+                        <img src="" alt="CHEESY ROLLS JAMON TOCINO">
+                    </div>
+                    <div class="card-info">
+                        <h3>CHEESY ROLLS JAMON TOCINO</h3>
+                        <p>6 Rollos horneados rellenos de jamon, tocino, queso mozzarella y parmesano + 1 cup de salsa de ajo</p>
+                        <p class="price">$4.490</p> <!-- Precio -->
+                        <button class="add-to-cart">Agregar al carrito</button> <!-- Botón -->
+                    </div>
+                </div>
+            </div>
+        </section> 
+        <!-- Aquí van los postres -->
+        <section class="section" id="postres">
+            <h2 class="secciones_h2">POSTRES</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <div class="image-container">
+                        <img src="" alt="CONO DE HELADO SIMPLE">
+                    </div>
+                    <div class="card-info">
+                        <h3>CONO DE HELADO SIMPLE</h3>
+                        <p>Helado a elección o mixto.</p>
+                        <p class="price">$990</p> <!-- Precio -->
+                        <button class="add-to-cart">Agregar al carrito</button> <!-- Botón -->
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-container">
+                        <img src="" alt="VASO DE HELADO + SALSA">
+                    </div>
+                    <div class="card-info">
+                        <h3>VASO DE HELADO + SALSA</h3>
+                        <p>Helado a elección o mixto + salsa de chocolate, manjar o frambuesa.</p>
+                        <p class="price">$1.490</p> <!-- Precio -->
+                        <button class="add-to-cart">Agregar al carrito</button> <!-- Botón -->
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-container">
+                        <img src="" alt="VASO DE HELADO + TOPPING + SALSA">
+                    </div>
+                    <div class="card-info">
+                        <h3>VASO DE HELADO + TOPPING + SALSA</h3>
+                        <p>Helado a elección o mixto + topping de Rolls o chubi + salsa de chocolate, manjar o frambuesa.</p>
+                        <p class="price">$2.290</p> <!-- Precio -->
+                        <button class="add-to-cart">Agregar al carrito</button> <!-- Botón -->
+                    </div>
+                </div>
+            </div>
+        </section> 
+        <!-- Aquí van las bebidas -->
+        <section class="section" id="bebidas">
+            <h2 class="secciones_h2">BEBESTIBLES</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <div class="image-container_bebestible">
+                        <img src="Coca_cola.png" alt="COCA-COLA 1.5LT">
+                    </div>
+                    <div class="card-info">
+                        <h3>COCA-COLA 1.5LT</h3>
+                        <p>Bebida familiar</p>
+                        <p class="price">$2.600</p> <!-- Precio -->
+                        <button class="add-to-cart">Agregar al carrito</button> <!-- Botón -->
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-container_bebestible">
+                        <img src="coca_cola_light.png" alt="COCA-COLA LIGTH 1.5LT">
+                    </div>
+                    <div class="card-info">
+                        <h3>COCA-COLA LIGTH 1.5LT</h3>
+                        <p>Bebida familiar</p>
+                        <p class="price">$2.600</p> <!-- Precio -->
+                        <button class="add-to-cart">Agregar al carrito</button> <!-- Botón -->
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-container_bebestible">
+                        <img src="Coca_cola_sin_azucar.png" alt="COCA-COLA SIN AZUCAR1.5LT">
+                    </div>
+                    <div class="card-info">
+                        <h3>COCA-COLA SIN AZUCAR 1.5LT</h3>
+                        <p>Bebida familiar</p>
+                        <p class="price">$2.600</p> <!-- Precio -->
+                        <button class="add-to-cart">Agregar al carrito</button> <!-- Botón -->
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-container_bebestible">
+                        <img src="Fanta.png" alt="FANTA 1.5LT">
+                    </div>
+                    <div class="card-info">
+                        <h3>FANTA 1.5LT</h3>
+                        <p>Bebida familiar</p>
+                        <p class="price">$2.600</p> <!-- Precio -->
+                        <button class="add-to-cart">Agregar al carrito</button> <!-- Botón -->
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-container_bebestible">
+                        <img src="Fanta_sin_azucar.png" alt="FANTA SIN AZUCAR 1.5LT">
+                    </div>
+                    <div class="card-info">
+                        <h3>FANTA SIN AZUCAR 1.5LT</h3>
+                        <p>Bebida familiar</p>
+                        <p class="price">$2.600</p> <!-- Precio -->
+                        <button class="add-to-cart">Agregar al carrito</button> <!-- Botón -->
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-container_bebestible">
+                        <img src="sprite.png" alt="SPRITE 1.5LT">
+                    </div>
+                    <div class="card-info">
+                        <h3>SPRITE 1.5LT</h3>
+                        <p>Bebida familiar</p>
+                        <p class="price">$2.600</p> <!-- Precio -->
+                        <button class="add-to-cart">Agregar al carrito</button> <!-- Botón -->
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-container_bebestible">
+                        <img src="sprite_sin_azucar.png" alt="SPRITE SIN AZUCAR 1.5LT">
+                    </div>
+                    <div class="card-info">
+                        <h3>SPRITE SIN AZUCAR 1.5LT</h3>
+                        <p>Bebida familiar</p>
+                        <p class="price">$2.600</p> <!-- Precio -->
+                        <button class="add-to-cart">Agregar al carrito</button> <!-- Botón -->
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-container_bebestible">
+                        <img src="Coca_cola_350cc.png" alt="COCA-COLA 350CC">
+                    </div>
+                    <div class="card-info">
+                        <h3>COCA-COLA 350CC</h3>
+                        <p>Bebida individual</p>
+                        <p class="price">$1.500</p> <!-- Precio -->
+                        <button class="add-to-cart">Agregar al carrito</button> <!-- Botón -->
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-container_bebestible">
+                        <img src="Coca_cola_sin_azucar_350cc.png" alt="COCA-COLA SIN AZUCAR 350CC">
+                    </div>
+                    <div class="card-info">
+                        <h3>COCA-COLA SIN AZUCAR 350CC</h3>
+                        <p>Bebida individual</p>
+                        <p class="price">$1.500</p> <!-- Precio -->
+                        <button class="add-to-cart">Agregar al carrito</button> <!-- Botón -->
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-container_bebestible">
+                        <img src="Fanta_350cc.png" alt="FANTA 350CC">
+                    </div>
+                    <div class="card-info">
+                        <h3>FANTA 350CC</h3>
+                        <p>Bebida individual</p>
+                        <p class="price">$1.500</p> <!-- Precio -->
+                        <button class="add-to-cart">Agregar al carrito</button> <!-- Botón -->
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-container_bebestible">
+                        <img src="Sprite_350cc.png" alt="SPRITE 350CC">
+                    </div>
+                    <div class="card-info">
+                        <h3>SPRITE 350CC</h3>
+                        <p>Bebida individual</p>
+                        <p class="price">$1.500</p> <!-- Precio -->
+                        <button class="add-to-cart">Agregar al carrito</button> <!-- Botón -->
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-container_bebestible">
+                        <img src="Sprite_sin_azucar_350cc.png" alt="SPRITE SIN AZUCAR 350CC">
+                    </div>
+                    <div class="card-info">
+                        <h3>SPRITE SIN AZUCAR 350CC</h3>
+                        <p>Bebida individual</p>
+                        <p class="price">$1.500</p> <!-- Precio -->
+                        <button class="add-to-cart">Agregar al carrito</button> <!-- Botón -->
+                    </div>
+                </div>
+            </div>
+        </section> 
+        <footer class="footer-container">
+            <div class="section">
+                <div class="contact-us">
+                    <h3>Contacto</h3>
+                    <p><i class="far fa-envelope"></i>&nbsp;nfo@example.com</p>
+                    <p><i class="fas fa-phone-alt"></i>&nbsp;+56 9 5630 0299</p>
+                    <p><i class="fas fa-map-marker-alt"></i>&nbsp;Álvarez 610, Viña del Mar</p>
+                </div>
+            </div>
+            <div class="section">
+                <div class="contact-us">
+                    <h3>Horario de atención</h3>
+                    <p>Lunes - Viernes: 11:00 - 23:00</p>
+                    <p>Sábado: 11:00 - 24:00</p>
+                    <p>Domingo: Cerrado</p>
+                </div>
+            </div>
+            <div class="section">
+                <div class="mapa">
+                    <h3>Mapa</h3>
+                    <a href="https://www.google.com/maps/place/Estacion+Pizza/@-33.0263717,-71.5537561,19.5z/data=!4m9!1m2!2m1!1shttps:%2F%2Fwww.google.com%2Fmaps%2Fplace%2F%25C3%2581lvarez%2B610,%2B2580109%2BVi%25C3%25B1a%2Bdel%2BMar,%2BValpara%25C3%25ADso%2F@-33.0264383,-71.556813,17z%2Fdata%3D*213m1*214b1*214m6*213m5*211s0x9689de0a2683751d:0x92aa1f569ac101fb*218m2*213d-33.0264428*214d-71.5542381*2116s%252Fg%252F11ld3yt53l%3Fentry%3Dttu!3m5!1s0x9689de0a248858c1:0x992f5fdff68f5b20!8m2!3d-33.0263221!4d-71.5540235!16s%2Fg%2F11k3hs9lb8?entry=ttu" target="_blank">
+                        <img src="Mapa.png" alt="Mapa de la ubicación">
+                    </a>
+                </div>
+            </div>
+            <div class="section">
+                <div class="follow-us">
+                    <h3>Síguenos</h3>
+                    <div class="socials">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        
+        
+        
+    </main>
+</body>
+</html>

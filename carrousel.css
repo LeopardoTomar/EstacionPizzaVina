@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x:hidden ;
+    font-family: Arial, sans-serif;
+}
+.carrousel {
+    width: 100%;
+    max-width: 120em;
+    margin-top: 100px; /* Ajusta el margen superior para dejar espacio para el encabezado */
+}
+.carrousel .grande {
+    width: 300%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    transition: all .5s ease;
+    transform: translateX(0%);
+}
+.carrousel .img {
+    width: calc(100% / 3);
+}
+.carrousel .puntos {
+    width: 100%;
+    background-color: rgb(129, 125, 125);
+    padding: 1%;
+    padding-left: 40%;
+    padding-right: 40%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+.carrousel .punto {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+}
+.carrousel .activo {
+    background-color: rgb(238, 147, 29);
+}
